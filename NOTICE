@@ -1,0 +1,18 @@
+Required Notice: Copyright 2026 Fred (gaofred) — https://github.com/gaofred/fredgao-exam-vocab-redevelopment
+
+本仓库为双许可，两者均禁止商业使用：
+
+1. scripts/ 目录下的全部 .py 源代码 —— PolyForm Noncommercial 1.0.0，全文见 LICENSE。
+   SPDX-License-Identifier: PolyForm-Noncommercial-1.0.0
+
+2. 文档与教学产出物（SKILL.md、README.md、CHANGELOG.md、references/、agents/、
+   test-prompts.json，以及用本 skill 生成的学生版与教师版讲义）—— CC BY-NC-SA 4.0，
+   全文说明见 LICENSE-docs。
+
+按 PolyForm 第「Noncommercial Organizations」条，学校、教育机构、公益组织、政府机构的
+使用属于允许范围，与经费来源无关。
+
+用本 skill 产出的讲义含原卷语句（第 III 层「原句必须回流」为设计要求），该部分著作权归
+原卷命题方，不在上述许可范围内。对外分发时请保留原卷来源说明。
+
+此前 scripts/ 采用 MIT 授权期间已获得的授权继续有效，不因本次变更而收回。
