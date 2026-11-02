@@ -1,5 +1,10 @@
 # 整卷二次开发 / Exam Paper Redevelopment
 
+[![validate](https://github.com/gaofred/fredgao-exam-vocab-redevelopment/actions/workflows/validate.yml/badge.svg)](https://github.com/gaofred/fredgao-exam-vocab-redevelopment/actions/workflows/validate.yml)
+[![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![docs: CC BY-NC-SA 4.0](https://img.shields.io/badge/docs-CC%20BY--NC--SA%204.0-lightgrey.svg)](LICENSE-docs)
+[![python](https://img.shields.io/badge/python-3.9%2B-blue.svg)](https://www.python.org/)
+
 把一套**已经考完、已经讲评过**的高中英语卷，逐篇拆成「可再教、可再练、可再测」的材料：词、块、句、篇四个层级各再发力一遍，一式两版（学生版 / 教师版）。
 
 面向高考英语（新高考 I 卷体例），适配阅读 A–D、七选五、完形填空、语法填空、应用文写作、读后续写六个板块。
