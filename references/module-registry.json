@@ -1,0 +1,453 @@
+{
+  "schema_version": 2,
+  "registry_version": "2.2.0",
+  "updated": "2026-11-02",
+  "note": "唯一的板块命名与路由来源。scripts/exam_sectionizer.py 与 scripts/validate_packet.py 都从这里读取标题，references/section-blueprints.md 必须与之一致（由 scripts/check_registry.py 校验）。改名字只改这里。",
+  "genres": [
+    {
+      "id": "narrative",
+      "zh": "记叙",
+      "cues": [
+        "past-tense density",
+        "first-person pronouns",
+        "time adverbials",
+        "quoted dialogue",
+        "character action chain"
+      ],
+      "default_iv": "IV-C"
+    },
+    {
+      "id": "expository",
+      "zh": "说明",
+      "cues": [
+        "present tense",
+        "definitional verbs (is / refers to / known as)",
+        "passive voice",
+        "data and figures",
+        "process or mechanism"
+      ],
+      "default_iv": "IV-A"
+    },
+    {
+      "id": "argumentative",
+      "zh": "议论",
+      "cues": [
+        "contrast markers (however / yet / in fact)",
+        "causal markers (therefore / thus)",
+        "modal verbs",
+        "claim + evidence structure",
+        "author stance"
+      ],
+      "default_iv": "IV-B"
+    },
+    {
+      "id": "practical",
+      "zh": "应用",
+      "cues": [
+        "imperative sentences",
+        "contact or link patterns",
+        "time-place listing",
+        "short sentences",
+        "for further information / please / if you"
+      ],
+      "default_iv": "IV-E"
+    }
+  ],
+  "star_scale": [
+    {
+      "stars": 1,
+      "label": "★☆☆☆",
+      "cefr": "A2–B1",
+      "desc": "词汇落在课标 3000 内，单句 ≤20 词，全为事实性信息，一步定位即可作答"
+    },
+    {
+      "stars": 2,
+      "label": "★★☆☆",
+      "cefr": "B1–B2",
+      "desc": "含 1–2 个派生词或抽象名词，含 1 个从句，需两步推理或上下文合并"
+    },
+    {
+      "stars": 3,
+      "label": "★★★☆",
+      "cefr": "B2",
+      "desc": "学术抽象词群，多重从句或非谓语嵌套，需跨段整合或识别隐含因果"
+    },
+    {
+      "stars": 4,
+      "label": "★★★★",
+      "cefr": "B2+",
+      "desc": "抽象论证与隐含态度，句法多层嵌套，需推断作者立场或评价未明说的前提"
+    }
+  ],
+  "modules": {
+    "vocab-family": {
+      "order": 1,
+      "roman": "I",
+      "title": "I. 词汇变形与拓展",
+      "purpose": "词族意识：同一词根的派生链与词性转换",
+      "answer_mode": "closed"
+    },
+    "phrase-chunk": {
+      "order": 2,
+      "roman": "II",
+      "title": "II. 短语积累与翻译",
+      "purpose": "块状语感：完整可迁移的动词短语、介词短语、语篇衔接块",
+      "answer_mode": "closed"
+    },
+    "sentence-imitation": {
+      "order": 3,
+      "roman": "III",
+      "title": "III. 句式分析与仿写",
+      "purpose": "结构迁移：先析结构，再换场景仿写",
+      "answer_mode": "open"
+    },
+    "sentence-long": {
+      "order": 3,
+      "roman": "III",
+      "title": "III. 长难句分析与翻译",
+      "purpose": "结构迁移：一句高价值长难句拆解 + 翻译",
+      "answer_mode": "open"
+    },
+    "IV-A": {
+      "order": 4,
+      "roman": "IV",
+      "form": "A",
+      "title": "IV. 语法填空改编",
+      "purpose": "篇章再造：按原篇事实链改写 120–170 词、8 空的语法填空",
+      "answer_mode": "closed"
+    },
+    "IV-B": {
+      "order": 4,
+      "roman": "IV",
+      "form": "B",
+      "title": "IV. 语篇逻辑排序",
+      "purpose": "篇章再造：句序/段序/衔接链重组，正解依赖语篇逻辑",
+      "answer_mode": "closed"
+    },
+    "IV-C": {
+      "order": 4,
+      "roman": "IV",
+      "form": "C",
+      "title": "IV. 叙事迁移",
+      "purpose": "篇章再造：从原篇叙事动作提取句式，换场景迁移",
+      "answer_mode": "open"
+    },
+    "IV-D": {
+      "order": 4,
+      "roman": "IV",
+      "form": "D",
+      "title": "IV. 长难句拆解与翻译",
+      "purpose": "篇章再造：抽取篇内 1–2 个承载论点的复杂句拆解并翻译",
+      "answer_mode": "open"
+    },
+    "IV-E": {
+      "order": 4,
+      "roman": "IV",
+      "form": "E",
+      "title": "IV. 微写作迁移",
+      "purpose": "篇章再造：以原篇内容为素材做 40–60 词微写作",
+      "answer_mode": "open"
+    },
+    "app-deconstruct": {
+      "order": 1,
+      "roman": "I",
+      "title": "I. 写作任务拆解",
+      "purpose": "读者、目的、必备内容、语气",
+      "answer_mode": "open"
+    },
+    "app-content": {
+      "order": 2,
+      "roman": "II",
+      "title": "II. 内容思维拓展",
+      "purpose": "2–4 条可落地的内容路径，每条带具体支撑点",
+      "answer_mode": "open"
+    },
+    "app-chunk": {
+      "order": 3,
+      "roman": "III",
+      "title": "III. 话题语块与高级表达",
+      "purpose": "8–12 条本题专用语块",
+      "answer_mode": "closed"
+    },
+    "app-micro": {
+      "order": 4,
+      "roman": "IV",
+      "form": "E",
+      "title": "IV. 句式与微写作迁移",
+      "purpose": "2–3 个短产出任务",
+      "answer_mode": "open"
+    },
+    "cont-language": {
+      "order": 1,
+      "roman": "I",
+      "title": "I. 情节与情感语言支持",
+      "purpose": "紧扣原故事的情绪、动作、心理、对话、环境语言",
+      "answer_mode": "closed"
+    },
+    "cont-upgrade": {
+      "order": 2,
+      "roman": "II",
+      "title": "II. 语言升级与细节描写训练",
+      "purpose": "3–5 处源文定位的升级练习",
+      "answer_mode": "open"
+    },
+    "cont-bridge": {
+      "order": 3,
+      "roman": "III",
+      "title": "III. 衔接句型",
+      "purpose": "承接两个给定首句、收束冲突的框架句",
+      "answer_mode": "closed"
+    },
+    "cont-micro": {
+      "order": 4,
+      "roman": "IV",
+      "form": "E",
+      "title": "IV. 环境或动作微写作",
+      "purpose": "一个聚焦的环境或动作描写任务",
+      "answer_mode": "open"
+    }
+  },
+  "answer_labels": {
+    "closed": {
+      "block": "【答案与点拨】",
+      "required": [
+        "答：",
+        "辨：",
+        "错：",
+        "换："
+      ],
+      "meaning": {
+        "答：": "答案本身",
+        "辨：": "为什么是这个，不是干扰项或近义形式",
+        "错：": "典型错误形态（拼写、词性、时态、搭配）",
+        "换：": "换一个场景可复用的表达或完整例句"
+      }
+    },
+    "open": {
+      "block": "【参考表达】",
+      "required": [
+        "参：",
+        "忌：",
+        "换："
+      ],
+      "meaning": {
+        "参：": "一条自然参考表达，不标唯一答案",
+        "忌：": "学生最容易走偏的写法",
+        "换：": "可迁移到的另一场景或可替换成分"
+      }
+    }
+  },
+  "sections": [
+    {
+      "id": "reading-a",
+      "label": "阅读A篇",
+      "pattern": "阅读\\s*[AＡ]\\s*篇",
+      "modules": [
+        "vocab-family",
+        "phrase-chunk",
+        "sentence-imitation"
+      ],
+      "iv_policy": {
+        "type": "by_genre",
+        "min_words": 200
+      },
+      "default_stars": 1
+    },
+    {
+      "id": "reading-b",
+      "label": "阅读B篇",
+      "pattern": "阅读\\s*[BＢ]\\s*篇",
+      "modules": [
+        "vocab-family",
+        "phrase-chunk",
+        "sentence-imitation"
+      ],
+      "iv_policy": {
+        "type": "by_genre",
+        "min_words": 220
+      },
+      "default_stars": 2
+    },
+    {
+      "id": "reading-c",
+      "label": "阅读C篇",
+      "pattern": "阅读\\s*[CＣ]\\s*篇",
+      "modules": [
+        "vocab-family",
+        "phrase-chunk",
+        "sentence-imitation"
+      ],
+      "iv_policy": {
+        "type": "by_genre",
+        "min_words": 0
+      },
+      "default_stars": 3
+    },
+    {
+      "id": "reading-d",
+      "label": "阅读D篇",
+      "pattern": "阅读\\s*[DＤ]\\s*篇",
+      "modules": [
+        "vocab-family",
+        "phrase-chunk",
+        "sentence-imitation"
+      ],
+      "iv_policy": {
+        "type": "by_genre",
+        "min_words": 0
+      },
+      "default_stars": 4
+    },
+    {
+      "id": "seven-choose-five",
+      "label": "七选五",
+      "pattern": "七\\s*选\\s*五",
+      "modules": [
+        "vocab-family",
+        "phrase-chunk",
+        "sentence-imitation"
+      ],
+      "iv_policy": {
+        "type": "fixed",
+        "form": "IV-B",
+        "preferred_variant": "paragraph-function",
+        "variant_reason": "原题已是句内/句间层面的衔接填空，篇级改造升到段落功能层面，避免在同一层级重复考一遍"
+      },
+      "default_stars": 3
+    },
+    {
+      "id": "cloze",
+      "label": "完形填空",
+      "pattern": "完形填空",
+      "modules": [
+        "vocab-family",
+        "phrase-chunk",
+        "sentence-imitation"
+      ],
+      "iv_policy": {
+        "type": "fixed",
+        "form": "IV-C",
+        "override_when_genre_not": "narrative",
+        "override_form": "IV-E"
+      },
+      "default_stars": 3
+    },
+    {
+      "id": "grammar-cloze",
+      "label": "语法填空",
+      "pattern": "语法填空(?!\\s*[（(]\\s*根据\\s*[A-DＡ-Ｄ]\\s*篇内容改编\\s*[）)])",
+      "modules": [
+        "vocab-family",
+        "phrase-chunk",
+        "sentence-long"
+      ],
+      "iv_policy": {
+        "type": "none",
+        "reason": "语法填空板块本身即语法任务，不再自造第二篇语法填空；三层制无 IV"
+      },
+      "default_stars": 2
+    },
+    {
+      "id": "application-writing",
+      "label": "应用文写作",
+      "pattern": "应用文(?:写作)?",
+      "modules": [
+        "app-deconstruct",
+        "app-content",
+        "app-chunk",
+        "app-micro"
+      ],
+      "iv_policy": {
+        "type": "section_specific"
+      },
+      "default_stars": 2
+    },
+    {
+      "id": "continuation-writing",
+      "label": "读后续写",
+      "pattern": "(?:读后)?续写(?:部分|写作)?",
+      "modules": [
+        "cont-language",
+        "cont-upgrade",
+        "cont-bridge",
+        "cont-micro"
+      ],
+      "iv_policy": {
+        "type": "section_specific"
+      },
+      "default_stars": 3
+    }
+  ],
+  "structural_rules": {
+    "note": "标准高考卷不写「阅读A篇」这类标签，只写「第二部分 阅读」+「第一节」+ 裸字母 A/B/C/D。找不到显式标签时按此结构解析。",
+    "part_keywords": {
+      "reading": [
+        "阅读"
+      ],
+      "language": [
+        "语言运用",
+        "语言知识运用"
+      ],
+      "writing": [
+        "写作",
+        "书面表达"
+      ],
+      "listening": [
+        "听力"
+      ]
+    },
+    "sub_slots": {
+      "reading": {
+        "1": "passage-letters",
+        "2": "seven-choose-five"
+      },
+      "language": {
+        "1": "cloze",
+        "2": "grammar-cloze"
+      },
+      "writing": {
+        "1": "application-writing",
+        "2": "continuation-writing"
+      }
+    },
+    "passage_letters": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "min_passage_chars": 120
+  },
+  "forbidden_title_aliases": [
+    "篇章改编语法填空",
+    "句式仿写",
+    "文章改写语法填空",
+    "语法填空（根据C篇内容改编）"
+  ],
+  "iv_variants": {
+    "IV-B": [
+      {
+        "id": "paragraph-function",
+        "title": "段落功能匹配",
+        "default_for": [
+          "seven-choose-five"
+        ],
+        "desc": "给五个段落各配一个抽象功能，正解依赖对段落作用的判断而非衔接词"
+      },
+      {
+        "id": "sentence-order",
+        "title": "句序排列",
+        "default_for": [
+          "reading-d"
+        ],
+        "desc": "五句还原顺序，正解依赖指代、连接与话题推进"
+      },
+      {
+        "id": "reference-chain",
+        "title": "衔接链还原",
+        "default_for": [],
+        "desc": "抽掉代词、连接词、同义复现处，让学生补回"
+      }
+    ]
+  }
+}

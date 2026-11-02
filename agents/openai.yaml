@@ -1,0 +1,4 @@
+interface:
+  display_name: "整卷二次开发"
+  short_description: "把考完的整卷拆成词汇、短语、句式、篇级改造四层，按体裁定篇级形态，产出师生两版讲义"
+  default_prompt: "Use $fredgao-exam-vocab-redevelopment to turn this finished exam into a section-aware, genre-routed redevelopment packet with paired student and teacher editions."

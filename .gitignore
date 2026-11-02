@@ -1,0 +1,18 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# 产出物（个体学生的卷子不外传）
+out/
+out_*/
+QA.json
+
+# 本地中间文件
+manifest.json
+content.json
+*.pdf
