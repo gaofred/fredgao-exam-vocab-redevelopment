@@ -23,13 +23,26 @@
 
 ## 效果预览
 
-左为学生版首页（含使用说明、板块星级、三层练习），右为教师版答案区（每题四要素）。
+### 学生版
 
-| 学生版 | 教师版 |
+| 首页：四层结构与星级 | IV. 语法填空改编（说明类） |
 |---|---|
-| <img src="assets/preview-student.png" width="380" alt="学生版预览"> | <img src="assets/preview-teacher.png" width="380" alt="教师版答案区预览"> |
+| <img src="assets/preview-student.png" width="420" alt="学生版首页"> | <img src="assets/preview-cloze.png" width="420" alt="语法填空改编"> |
+| 板块星级、词汇变形、短语积累，逐层递进 | 按原篇事实链改写，8 空，编号空原样保留 |
 
-示例已隐去真实校名与卷名。
+| IV. 语篇逻辑排序（议论类） | III. 句式分析与仿写 |
+|---|---|
+| <img src="assets/preview-order.png" width="420" alt="语篇逻辑排序"> | <img src="assets/preview-sentence.png" width="420" alt="句式分析与仿写"> |
+| 五句还原顺序，正解依赖指代与话题推进 | 原句逐字引用并标段落定位，先析结构再换场景 |
+
+### 教师版
+
+| 封闭题：答 / 辨 / 错 / 换 | 开放题：参 / 忌 / 换 |
+|---|---|
+| <img src="assets/preview-teacher.png" width="420" alt="封闭题答案"> | <img src="assets/preview-open-answer.png" width="420" alt="开放题参考表达"> |
+| 每题四要素，含易错形态与可复用例句 | 不给唯一答案，只给参考、走偏路径与迁移场景 |
+
+示例数据已隐去真实校名与卷名。
 
 ## 快速开始
 
