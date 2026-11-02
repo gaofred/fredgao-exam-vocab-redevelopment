@@ -105,6 +105,56 @@ def run_validator(manifest: Path, student: Path, teacher: Path) -> int:
     ).returncode
 
 
+
+def check_audit(failures: list[str]) -> None:
+    """内容自审：正例通过，三类硬伤各能报出。"""
+    sys.path.insert(0, str(ROOT / "scripts"))
+    import audit_content as A
+
+    exam = "Some opening words here. Manuel opened the door and let the dog out. Then he sat down."
+
+    def build(sentence: str, item_extra: str = "   ① 主干是___________。") -> dict:
+        return {
+            "sections": [{
+                "label": "阅读A篇",
+                "blocks": [{
+                    "title": "III. 句式分析与仿写",
+                    "items": [f"1. 原句：{sentence}（A篇 第1段）", item_extra],
+                    "answers": ["1. ① 参：Manuel opened the door."],
+                }],
+            }]
+        }
+
+    good = build("Manuel opened the door and let the dog out.")
+    errors: list[str] = []
+    warnings: list[str] = []
+    A.check_sources(good, exam, errors, warnings)
+    check(not errors, f"原句回流：正句通过（{errors[:1]}）", failures)
+
+    errors = []
+    A.check_sources(build("Manuel opened the window and let the dog out."), exam, errors, warnings)
+    check(len(errors) == 1, "原句回流：改写句被拦下", failures)
+
+    errors = []
+    # 只取长句前半截：原文此处不断句，应判「未断句」
+    A.check_sources(build("Manuel opened the door and let"), exam, errors, warnings)
+    check(len(errors) == 1, "原句回流：截断长句被拦下", failures)
+
+    errors = []
+    A.check_circled(build("Manuel opened the door.", "   ② ③ 仿写：___________"), errors)
+    check(len(errors) >= 1, "圈号：一行两个圈号被拦下", failures)
+
+    errors = []
+    merge = {
+        "sections": [{"label": "阅读A篇", "blocks": [{
+            "title": "I. 词汇变形与拓展",
+            "items": ["1. available（adj.）→ ______（n.）"],
+            "answers": ["1. 答：availability　辨：-ability 名词化，y 变 i 加 -ity　换：x"],
+        }]}]
+    }
+    A.check_derivation(merge, errors)
+    check(len(errors) == 1, "构词：声称 y 变 i 而源词无 y，被拦下", failures)
+
 def main() -> int:
     failures: list[str] = []
     with tempfile.TemporaryDirectory() as tmp:
@@ -146,6 +196,9 @@ def main() -> int:
         R.build(leaked_content, True, leaked_teacher)
         leaked = run_validator(manifest, leaked_student, leaked_teacher)
         check(leaked == 1, f"含泄漏样本判定 FAIL（退出码 {leaked}）", failures)
+
+    print("内容自审：")
+    check_audit(failures)
 
     print()
     if failures:
