@@ -4,7 +4,11 @@
 `SKILL.md`、`README.md`、`CHANGELOG.md`、`references/` 下的所有文件、
 `agents/`、`test-prompts.json`，以及用本 skill 生成的教学讲义（学生版 / 教师版）。
 
-This license applies to everything except the `.py` source code under `scripts/`.
+`scripts/` 下的代码另见 [LICENSE](LICENSE)，采用 PolyForm Noncommercial 1.0.0。
+两者共同点：均不允许商业使用。
+
+This license applies to everything except the `.py` source code under `scripts/`,
+which is licensed under PolyForm Noncommercial 1.0.0 — see LICENSE.
 
 ---
 
