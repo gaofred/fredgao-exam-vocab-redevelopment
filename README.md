@@ -1,8 +1,7 @@
 # 整卷二次开发 / Exam Paper Redevelopment
 
 [![validate](https://github.com/gaofred/fredgao-exam-vocab-redevelopment/actions/workflows/validate.yml/badge.svg)](https://github.com/gaofred/fredgao-exam-vocab-redevelopment/actions/workflows/validate.yml)
-[![license: PolyForm Noncommercial](https://img.shields.io/badge/license-PolyForm%20Noncommercial-orange.svg)](LICENSE)
-[![docs: CC BY-NC-SA 4.0](https://img.shields.io/badge/docs-CC%20BY--NC--SA%204.0-lightgrey.svg)](LICENSE-docs)
+[![license: CC BY-NC-SA 4.0](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-lightgrey.svg)](LICENSE)
 [![python](https://img.shields.io/badge/python-3.9%2B-blue.svg)](https://www.python.org/)
 
 把一套**已经考完、已经讲评过**的高中英语卷，逐篇拆成「可再教、可再练、可再测」的材料：词、块、句、篇四个层级各再发力一遍，一式两版（学生版 / 教师版）。
@@ -113,14 +112,15 @@ Fred 老师 · 公众号：佛瑞德英语教学
 
 完整条款与适用范围见 [NOTICE](NOTICE)。
 
-| 范围 | 许可 | 说明 |
-|---|---|---|
-| `scripts/` 下的代码 | **PolyForm Noncommercial 1.0.0**，见 [LICENSE](LICENSE) | 可自由使用、修改、再分发，但限于非商业目的 |
-| 文档与生成的教学讲义 | **CC BY-NC-SA 4.0**，见 [LICENSE-docs](LICENSE-docs) | 需署名、非商业、相同方式共享 |
+全仓库统一采用 **CC BY-NC-SA 4.0**，见 [LICENSE](LICENSE)。
 
-按 PolyForm 的条款，学校、教育机构、公益组织、政府机构的使用一律属于允许范围，与经费来源无关——所以老师在校内怎么用都行。
+| 你可以 | 你必须 |
+|---|---|
+| 复制、分发、修改、基于本作品再创作 | 署名；非商业使用；衍生作品沿用同样的许可 |
+
+CC 说的「非商业」，指不以获取商业利益或金钱报酬为主要目的。课堂用、校内印、教研分享、非营利公众号推送都算非商业；付费课程、付费专栏、出版物、对外收费的培训则不属于。
 
 两点说明：
 
-- 本项目此前代码段为 MIT，2026-11-02 改为非商业许可。此前按 MIT 获得的授权继续有效，不受影响。
+- 本项目 2026-11-02 之前代码段为 MIT。按 MIT 已获得的授权继续有效，不因这次变更收回。
 - 产出的讲义里含原卷语句（第 III 层「原句必须回流」是设计要求），那部分著作权归原卷命题方，不在本许可范围内。对外分发时请保留原卷来源说明。
