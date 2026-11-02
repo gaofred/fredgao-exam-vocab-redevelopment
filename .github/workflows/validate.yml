@@ -1,0 +1,46 @@
+name: validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 安装渲染依赖
+        run: python -m pip install --quiet python-docx
+
+      - name: 板块命名一致性
+        run: python scripts/check_registry.py
+
+      - name: 脚本语法
+        run: python -m compileall -q scripts tests
+
+      - name: 冒烟测试
+        run: python tests/test_smoke.py
+
+      - name: 分段脚本自检（结构解析通道）
+        run: |
+          P1="$(printf 'Short passage about trees and water cooling. %.0s' {1..12})"
+          P2="$(printf 'Short passage about history and human stories. %.0s' {1..12})"
+          P3="$(printf 'Short passage about the concert economy. %.0s' {1..12})"
+          P4="$(printf 'Short passage about crows and cigarette waste. %.0s' {1..12})"
+          printf '第二部分 阅读\n第一节\nA\n%s\nB\n%s\nC\n%s\nD\n%s\n' "$P1" "$P2" "$P3" "$P4" > /tmp/sample.txt
+          python scripts/exam_sectionizer.py /tmp/sample.txt --output /tmp/manifest.json
+          python - <<'PY'
+          import json
+          data = json.load(open("/tmp/manifest.json"))
+          ids = data["detected_ids"]
+          assert data["detection_source"] == "structural", data["detection_source"]
+          assert ids == ["reading-a", "reading-b", "reading-c", "reading-d"], ids
+          print("结构解析命中:", ids)
+          PY

@@ -227,13 +227,17 @@ def find_markers(lines: list[str], offsets: list[int], registry: dict) -> tuple[
 
     structural = [(index, section_id, "结构解析") for index, section_id in parse_structural(lines, registry)]
 
-    source = "explicit"
+    # Record which channel actually produced the markers, not which one was tried.
     if len({sid for _, sid, _ in structural}) >= 3:
         source = "structural"
         covered = {sid for _, sid, _ in structural}
         picked = structural + [item for item in explicit if item[1] not in covered]
+    elif explicit:
+        source = "explicit"
+        picked = explicit
     else:
-        picked = explicit or structural
+        source = "structural"
+        picked = structural
 
     labels = {section["id"]: section["label"] for section in registry["sections"]}
     picked.sort(key=lambda item: item[0])

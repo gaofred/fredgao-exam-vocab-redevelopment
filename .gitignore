@@ -16,3 +16,7 @@ QA.json
 manifest.json
 content.json
 *.pdf
+
+# 预览图源文件（只保留 assets/ 下的成品）
+demo/
+assets_tmp/
