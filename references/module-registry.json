@@ -438,6 +438,7 @@
         "id": "sentence-order",
         "title": "句序排列",
         "default_for": [
+          "reading-c",
           "reading-d"
         ],
         "desc": "五句还原顺序，正解依赖指代、连接与话题推进"
